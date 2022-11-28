@@ -5,19 +5,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Stacktistics</title>
 		<meta name="description" content="View your Stack Exchange site stats. Features in-depth rep history, badge tracker, best posts, and more. Developed by Lakshya Raj.">
-		<meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src api.stackexchange.com">
 		<link rel="stylesheet" href="./assets/common.css">
 	</head>
-	<body>
+	<body data-mode="signin">
 		<header>
 			<h1>Stacktistics</h1>
+			<a href="/auth.html" id="sign-in-btn" class="action-btn">Sign in</a>
+			<a href="/signout.html" id="sign-out-btn" class="action-btn">Sign out</a>
 		</header>
 		<main>
-			<p>Hello, world! This is Stacktistics!</p>
+			<div id="statview">
+				<p>Your statistics are displayed here, now that you've signed in.</p>
+			</div>
+			<div id="signin">
+				<p>Sign in to view your stats.</p>
+			</div>
 		</main>
 		<footer>
 			<p>Stacktistics is open source and <a href="https://github.com/lraj22/stacktistics">on GitHub</a>.</p>
 		</footer>
+		<script src="./assets/common.js"></script>
 		<script src="./assets/index.js"></script>
 	</body>
 </html>

@@ -20,6 +20,9 @@ header {
 	background-color: #2f2f2f;
 	padding: 0.75rem 1rem;
 	box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 h1 {
@@ -31,6 +34,40 @@ h1 {
 main {
 	flex-grow: 1;
 	margin: 1rem;
+}
+
+body[data-mode="signin"] main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body[data-mode="signin"] #statview,
+body[data-mode="signin"] #sign-out-btn {
+	display: none;
+}
+
+body[data-mode="statview"] #signin,
+body[data-mode="statview"] #sign-in-btn {
+	display: none;
+}
+
+#signin {
+	text-align: center;
+}
+
+.action-btn {
+	color: inherit;
+	padding: 0.5rem 1rem;
+	border: 2px solid #ef6712;
+	border-radius: 2px;
+	cursor: pointer;
+	background-color: transparent;
+	transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+	background-color: #ef6712;
 }
 
 a {
